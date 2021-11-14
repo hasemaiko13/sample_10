@@ -1,0 +1,339 @@
+/* ======================
+	base
+====================== */
+
+img {
+	max-width: 100%;
+}
+
+body {
+	overflow: hidden;
+}
+
+.wrap {
+	margin: auto;
+	width: 100%;
+	height: 100vh;
+	background: #FEA443;
+	position: relative;
+}
+
+/* ======================
+	アニメーション
+====================== */
+/* 動物アニメーション */
+.shake {
+	width: 200px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.shake img {
+	transition: 0.2s all;
+}
+
+.shake:hover {
+	animation: none;
+}
+
+.shake:hover img {
+	transform: scale(2);
+}
+
+.shake1 {
+	top: 200px;
+	left: 30px;
+	animation: shake1 .2s linear infinite;
+}
+
+@keyframes shake1 {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	40% {
+		transform: translate(-10px, 0);
+	}
+
+	80% {
+		transform: translate(10px, 0);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.shake2 {
+	top: 200px;
+	right: 30px;
+	animation: shake2 0.4s ease-in-out infinite;
+}
+
+@keyframes shake2 {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	25% {
+		transform: translate(20px, 40px);
+	}
+
+	50% {
+		transform: translate(40px, 0px);
+	}
+
+	75% {
+		transform: translate(20px, 40px);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.shake3 {
+	bottom: 200px;
+	right: 30px;
+	animation: shake3 0.2s ease-in-out infinite alternate
+}
+
+@keyframes shake3 {
+	0% {
+		transform: rotate(20deg);
+	}
+
+	100% {
+		transform: rotate(-20deg);
+	}
+}
+
+.shake4 {
+	bottom: 200px;
+	left: 30px;
+	animation: shake4 0.6s linear infinite;
+}
+
+@keyframes shake4 {
+	0% {
+		transform: translate(0, 0) rotate(15deg);
+	}
+
+	25% {
+		transform: translate(20px, 40px);
+	}
+
+	50% {
+		transform: translate(40px, 0px) rotate(-15deg);
+	}
+
+	75% {
+		transform: translate(20px, 40px);
+	}
+
+	100% {
+		transform: translate(0, 0) rotate(15deg);
+	}
+}
+
+.shake5 {
+	top: 300px;
+	left: 400px;
+	animation: shake5 4s linear infinite;
+}
+
+@keyframes shake5 {
+	0% {
+		transform: translate(0, 0) rotate(10deg);
+	}
+
+	12% {
+		transform: translate(-30px, 60px) rotate(0deg);
+	}
+
+	24% {
+		transform: translate(-60px, 0px) rotate(-10deg);
+	}
+
+	36% {
+		transform: translate(-30px, -60px) rotate(0deg);
+	}
+
+	48% {
+		transform: translate(0, 0) rotate(10deg);
+	}
+
+	60% {
+		transform: translate(30px, 60px) rotate(0deg);
+	}
+
+	72% {
+		transform: translate(80px, 0px) rotate(-10deg);
+	}
+
+	84% {
+		transform: translate(40px, -80px) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(0, 0) rotate(10deg);
+	}
+}
+
+.shake6 {
+	top: 300px;
+	right: 400px;
+	animation: shake6 .3s ease-in-out infinite;
+}
+
+@keyframes shake6 {
+	0% {
+		transform: translate(0px, 0px) scale(1, 1);
+	}
+
+	25% {
+		transform: translate(-5px, -10px) scale(1, 0.6);
+	}
+
+	50% {
+		transform: translate(5px, 10px) scale(1, 1);
+	}
+
+	75% {
+		transform: translate(-5px, -10px) scale(1, 0.6);
+	}
+
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+/* テキストスクロールアニメーション */
+.scrolltextArea {
+	width: 100%;
+	position: absolute;
+	margin: auto;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.scrolltextArea.scrolltextArea-top {
+	top: 40px;
+}
+
+.scrolltextArea.scrolltextArea-bottom {
+	bottom: 40px;
+}
+
+.scrolltextWrap {
+	display: inline-block;
+	font-size: 6vw;
+	font-weight: bold;
+	color: #FEA443;
+	text-shadow: #000 1px 1px 0px, #000 -1px 1px 0px, #000 1px -1px 0px, #000 -1px -1px 0px
+}
+
+.scrolltext {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	animation: textscroll1 3s linear infinite;
+}
+
+.scrolltextArea.scrolltextArea-bottom .scrolltext {
+	animation-direction: reverse;
+}
+
+@keyframes textscroll1 {
+	0% {
+		transform: translateX(4px);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+/* カウント */
+.countup {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.countup .num {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 20vw;
+	font-weight: bold;
+}
+
+/* 肉球 */
+.anime_second {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.pad1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	width: 200px;
+}
+
+.pad1.active img {
+	animation: pad1 .5s .3s ease-in-out forwards;
+}
+
+@keyframes pad1 {
+	0% {
+		transform: translate(20px, -30px);
+		opacity: 0;
+	}
+
+	99% {
+		transform: translate(-20px, 30px);
+		opacity: 1;
+	}
+100% {
+		transform: translate(-20px, 30px);
+		opacity: 0;
+	}
+}
+
+.pad2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	width: 300px;
+}
+.pad2.active img {
+	opacity: 0;
+	animation: pad2 .5s 1s ease-in-out forwards;
+}
+
+@keyframes pad2 {
+	0% {
+		transform: translate(20px, -30px);
+		opacity: 0;
+	}
+
+	99% {
+		transform: translate(-20px, 30px);
+		opacity: 1;
+	}
+100% {
+		transform: translate(-20px, 30px);
+		opacity: 0;
+	}
+}
