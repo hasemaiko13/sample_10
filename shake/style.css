@@ -238,7 +238,7 @@ body {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	animation: textscroll1 3s linear infinite;
+	animation: textscroll1 10s linear infinite;
 }
 
 .scrolltextArea.scrolltextArea-bottom .scrolltext {
